@@ -1,0 +1,67 @@
+/* base styling in BEM */
+  
+ body {
+     background-color: red;
+ }
+  @mixin font-size($sizeValue: 1.6) {
+    font-size: $size * 1px
+    font-size: $size * 0.1rem
+  }
+  
+  p {
+    @include font-size(13);
+  }
+  
+  
+  @media (min-width: 768px) {
+      a,a:focus,a:visited {
+          font-weight:500
+      }
+  
+      body {
+          font-size: 18px;
+          line-height: 1.2em
+      }
+  
+      p {
+          font-weight: 300
+      }
+  }
+  
+  .heading--main {
+    @include font-size(35);
+    font-weight: 300;
+    line-height: 1.2em;
+    
+    @media only screen and (min-width: 768px) {
+      @include font-size(50);
+    }  
+  }
+  
+  .heading--kicker {
+    @include font-size(12);
+    line-height: 1.3;
+    margin-bottom: .4em
+    
+    @media only screen and (min-width: 768px) {
+      @include font-size(14);
+    }  
+  }
+  
+  
+  /*layout*/
+  .l-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  
+  /* utilities*/
+    
+  .u-text--center {
+    text-align: center; 
+  }
+  
